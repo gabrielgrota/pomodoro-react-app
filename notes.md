@@ -53,3 +53,6 @@ initialState: O valor inicial do estado, que pode ser qualquer tipo de dado (boo
 
 
 ### [como usar setInterval no React](https://medium.com/@jonjamesdesigns/how-to-use-setinterval-in-react-10612f122027)
+
+19052024
+adicionei o componente "Button" para padronizar os botões com ícone, função e nome.
