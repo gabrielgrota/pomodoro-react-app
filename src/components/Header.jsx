@@ -1,6 +1,6 @@
 import React from "react";
-import './Header.css'
-import imgTimer from './timer.png'
+import '../styles/Header.css'
+import imgTimer from '../img/timer.png'
 
 function Header(){
     return (

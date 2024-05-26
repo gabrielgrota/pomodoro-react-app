@@ -1,0 +1,39 @@
+#input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+#input-main{
+    display: flex;
+    width: 120px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    background-color: #ddd;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#input-main:hover{
+    background-color: #cccccc;
+}
+
+#input-main::-webkit-outer-spin-button,
+#input-main::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#input-main:focus {
+    border: none;
+    outline: none; /* Assegura que não haja borda ao focar */
+}
+
+#input-label{
+    font-size: 20px;
+    font-weight: 700;
+}
