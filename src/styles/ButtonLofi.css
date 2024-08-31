@@ -1,0 +1,18 @@
+#button-lofi-main{
+    display: flex;
+    width: 60px;
+    height: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    border: none;
+}
+
+#button-lofi-main:hover{
+    background-color: #cccccc;
+}
+
+#button-lofi-name{
+    font-size: 14px;
+    font-weight: 700;
+}

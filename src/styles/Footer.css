@@ -14,6 +14,8 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    text-align: center;
+    width: 100px;
 }
 
 #footer-p{
@@ -31,5 +33,5 @@
 }
 
 #footer-link:hover{
-    color: black;
+    color: rgb(130, 130, 130);
 }

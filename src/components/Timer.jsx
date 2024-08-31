@@ -9,6 +9,8 @@ import imgPause from '../img/pause.png';
 import imgReset from '../img/reset.png';
 import img25min from '../img/25min.png';
 import img5min from '../img/5min.png';
+import { collection, addDoc, Timestamp } from 'firebase/firestore'; // Importa as funções do Firebase
+import { db } from '../config/firebase';
 
 function Timer(){
     
@@ -46,7 +48,10 @@ function Timer(){
     }, [isActive, count, isWorkTime, breakDuration, workDuration]);
 
     // inicia ao timer
-    const startTimer = () => {setIsActive(true);}
+    const startTimer = () => {
+        setIsActive(true);
+        saveTimestamp();
+    }
 
     // pausa ao timer
     const pauseTimer = () => {setIsActive(false);}
@@ -93,6 +98,20 @@ function Timer(){
         const audio = new Audio('/crystalEcho.mp3');
         audio.play();
     }
+
+    // salva timestamp para firebase
+    const saveTimestamp = async () => {
+        const timestamp = Timestamp.now();
+
+        try {
+            await addDoc(collection(db, 'pomodoroSessions'), {
+                timestamp
+            });
+            console.log('timestamp saved sucessfully');
+        } catch (e) {
+            console.error('error saving timestamp: ', e)
+        }
+    };
 
     return (
         <div id='timer-main'>

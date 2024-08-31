@@ -201,11 +201,11 @@ export default App;
 ```
 
 ### mais funcionalidades:
-- dark mode
+- ~~dark mode~~
 - ~~usuário personalizar tempo~~
 - separar componentes ~~toggleDiv~~ e ~~CustomDuration~~
 - ~~quando concluir 25min, tocar som~~
-- iniciar automaticamente o break
+- ~~iniciar automaticamente o break~~
 - quando break acabar, zerar o contador
 - adaptar ao mobile
 - tentar salvar quantidade de vezes feitas, ver como fazer isso.
@@ -226,6 +226,45 @@ fiz o componente modl, clicando no botao para mostrar a div e clicando no fundo 
 - ~~fazer botão aceitar não mostrar name (criei outro componente)/, apenas `ButtonIcon`~~
 - colocar função toggleModal no componente /Modal para fechar o modal quando fizer o update
 
+---
+- criei o modal assistindo esse vídeo:
+  - [Vídeo](https://www.youtube.com/watch?v=9DwGahSqcEc)
+  - [Código](https://github.com/ecole-du-web/react-modal/blob/main/src/Components/Modal/Modal.js)
+---
+
 0.1.2:
 adicionei o modal no botão `custom` para usuário poder personalizar o work e break time!
 mudei alguns componentes no front
+
+0.1.3
+implementei o dark mode, preciso melhorar ainda alguns componentes como button.
+adicioinei o favicon
+
+- saber mais sobre a técnica pomodoro 
+- colocar este lofi também https://www.youtube.com/live/f_WCg5WpFC8?si=9H_4sFoudzHlShKM
+- colocar good morning, gabriel. quando for dia, tarde e noite.
+
+31082024
+- ~~adicionar novas opções de lofi~~
+- ~~voltar div do lofi ao meio igual 0.1.2~~
+- to-do list
+- link para artigo sobre pomodoro technique
+- banco de dados para salvar quantidade de vezes feita, data, hora e local
+- consumir API de clima
+
+O uso de key={link} é uma abordagem comum para forçar a atualização de componentes quando o estado muda. Se o iframe não estava atualizando corretamente antes, isso deve resolver o problema.
+
+implementar firebase: [link vídeo](https://www.youtube.com/watch?v=2hR-uWjBAgw)
+- rules
+- using moment js to format timestamp, [link](https://momentjs.com/)
+
+- quando clicar no botão start automaticamente salva o timestamp e pede o local em que está no momento
+
+- ver o await
+
+0.1.3
+- novo icon
+- novas opções de lofi (bossa e jazz)
+- log de quantas sessões foram feitas
+- conexão com firebase: database de sessões
+- adicionado moment js para formatar timestamp

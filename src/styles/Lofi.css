@@ -2,3 +2,9 @@
     display: flex;
     justify-content: center;
 }
+
+#lofi-buttons{
+    display: flex;
+    margin: 6px 0 0 0;
+    justify-content: space-evenly;
+}

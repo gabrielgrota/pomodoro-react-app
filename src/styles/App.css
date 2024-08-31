@@ -14,3 +14,26 @@ html, body{
   flex-direction: column;
   min-height: 100vh;
 }
+
+:root {
+  --background-color-light: #ffffff;
+  --background-color-dark: #121212;
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+}
+
+body.light {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+}
+
+body.dark {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}

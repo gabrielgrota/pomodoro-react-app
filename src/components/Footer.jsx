@@ -2,9 +2,14 @@ import React from "react";
 import '../styles/Footer.css'
 import imgGitHub from '../img/github.png'
 import Lofi from './Lofi'
+import DateTime from "./DateTime";
 
 function Footer(){
     return <div id="footer-main">
+        <div id="footer-github">
+            <DateTime />
+            {/* <a id="footer-link" href="https://www.stu.ca/studentsuccess/pomodoro-technique/">/theTechnique</a> */}
+        </div>
         <div id="footer-lofi">
             <Lofi />
         </div>
