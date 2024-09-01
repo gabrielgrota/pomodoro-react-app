@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCM5G9tBOQ_WeIuZehPg3f4NnQA_Djd9RQ",
+  apiKey: process.env.API_KEY,
   authDomain: "pomodoro-react-208.firebaseapp.com",
   projectId: "pomodoro-react-208",
   storageBucket: "pomodoro-react-208.appspot.com",
