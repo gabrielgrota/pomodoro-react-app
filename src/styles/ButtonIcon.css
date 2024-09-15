@@ -5,14 +5,32 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px var(--text-color);
+    color: var(--text-color);
+    margin: 6px 6px 6px 6px;
 }
 
 #button-icon-main:hover{
-    background-color: #cccccc;
+    transition: 300ms all;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 #button-icon-icon{
+    padding: 5px;
     width: 25px;
     height: 25px;
+}
+
+body.light #button-icon-icon:hover{
+    filter: invert();
+}
+
+body.dark #button-icon-icon{
+    filter: invert();
+}
+
+body.dark #button-icon-icon:hover{
+    filter: invert(0);
 }

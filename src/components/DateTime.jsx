@@ -37,7 +37,7 @@ export default function DateTime(){
             <p id="datetime-info">log: </p>
             {datetimeList.map((datetime) => (
                 <div>
-                    <p id="datetime-info">{moment(datetime.timestamp.toDate()).calendar()}</p>
+                    <p id="datetime-info">{moment(datetime.timestamp.toDate()).format('MMMM Do YYYY, h:mm:ss a')}</p>
                 </div>
             ))}
         </div>

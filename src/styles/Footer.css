@@ -1,6 +1,6 @@
 #footer-main{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
 }
 
@@ -34,4 +34,8 @@
 
 #footer-link:hover{
     color: rgb(130, 130, 130);
+}
+
+#footer-log{
+
 }

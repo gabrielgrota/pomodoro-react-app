@@ -11,33 +11,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
 }
 
 #timer-count{
-    font-size: 62px;
+    font-size: 72px;
+    padding: 6px 0;
 }
 
 #timer-workTime{
-    font-weight: 400;
+    font-weight: 700;
+    padding: 0 0 12px 0;
 }
 
-#timer-btn-play{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-#timer-btn-play Button{
-    margin: 0 12px;
-}
-
+#timer-btn-play,
 #timer-btn-set{
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 4px 0;
 }
 
+#timer-btn-play Button,
 #timer-btn-set Button{
-    margin: 0 12px;
+    margin: 8px 12px;
 }

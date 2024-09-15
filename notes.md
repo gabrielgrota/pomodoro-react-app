@@ -9,6 +9,9 @@ objetivos:
 - pré-definido: 25 min, 5min
 - começar contador com 25:00
 ---
+links importantes:
+
+[firebase](https://console.firebase.google.com/u/0/project/pomodoro-react-208/overview)
 
 pesquisas:
 
@@ -206,14 +209,14 @@ export default App;
 - separar componentes ~~toggleDiv~~ e ~~CustomDuration~~
 - ~~quando concluir 25min, tocar som~~
 - ~~iniciar automaticamente o break~~
-- quando break acabar, zerar o contador
+- ~~quando break acabar, zerar o contador~~
 - adaptar ao mobile
 - tentar salvar quantidade de vezes feitas, ver como fazer isso.
-- desenhar logo do meu pomodoro
+- ~~desenhar logo do meu pomodoro~~
 - ~~criar componente para input~~
 - ~~adaptar toggleDiv para receber os valores que vão no nome do botão como `hide or show`, `close or custom`~~
 - abrir toggleDiv em pop up (modal)
-- colocar array de links de lofi, e button onde a pessoa troca os tipos de lofi (nordic, jazz, hiphop)
+- ~~colocar array de links de lofi, e button onde a pessoa troca os tipos de lofi (nordic, jazz, hiphop)~~
 - trocar língua do site, portugues ou inglês ou swedish
 - ~~juntar lofi e footer do github. focar no `/timer.jsx`~~
 - ~~timer está cadastrado no css como flex:1; assim deixando ele com todo o espaço principal da tela~~
@@ -249,7 +252,7 @@ adicioinei o favicon
 - ~~voltar div do lofi ao meio igual 0.1.2~~
 - to-do list
 - link para artigo sobre pomodoro technique
-- banco de dados para salvar quantidade de vezes feita, data, hora e local
+- ~~banco de dados para salvar quantidade de vezes feita, data, hora e local~~
 - consumir API de clima
 
 O uso de key={link} é uma abordagem comum para forçar a atualização de componentes quando o estado muda. Se o iframe não estava atualizando corretamente antes, isso deve resolver o problema.
@@ -268,3 +271,28 @@ implementar firebase: [link vídeo](https://www.youtube.com/watch?v=2hR-uWjBAgw)
 - log de quantas sessões foram feitas
 - conexão com firebase: database de sessões
 - adicionado moment js para formatar timestamp
+
+0.1.4
+implementar novo visual - ok
+barra lateral a direita com botoes com as funcionalidades:
+  conta do usuario para log
+  custom timer
+  light or dark mode
+  mostrar e nao mostrar lista de to-do
+  mostrar e nao mostrar log de horario e dia feito o pomo
+  mostrar e nao mostrar o lofi na tela
+  link para github
+
+~~mudar visual do botão, tornando invisivel apenas com a borda e quando usuário coloca o mouse, automaticamente preenche.~~
+
+links importantes para prosseguir com o projeto:
+[pedroTech](https://www.youtube.com/watch?v=2hR-uWjBAgw)
+[firebase](https://console.firebase.google.com/u/0/project/pomodoro-react-208/overview)
+
+worktime no meio da tela, fazer função quando mudar para work short break e long break automatico.
+
+body.light e body.dark muda todo o tema da página. prestar atenção nisso.
+
+alterar funções dos botoes:
+botao long break precisa colocar 10 min na tela.
+start precisa mudar dependendo se está ativo = pause, se está desativado = start

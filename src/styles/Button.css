@@ -1,23 +1,27 @@
 #button-main{
     display: flex;
-    width: 120px;
-    height: 45px;
-    justify-content: space-evenly;
+    width: 126px;
+    height: 38px;
+    justify-content: center;
     align-items: center;
     border-radius: 30px;
-    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px var(--text-color);
+    color: var(--text-color);
 }
 
 #button-main:hover{
-    background-color: #cccccc;
+    transition: 300ms all;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
-#button-icon{
+/* #button-icon{
     width: 25px;
     height: 25px;
-}
+} */
 
 #button-name{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }

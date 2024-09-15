@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Timer.css'
 import Button from './Button';
-import CustomDuration from './CustomDuration';
-import Modal from './Modal';
 /* icons from buttons */
 import imgPlay from '../img/play.png';
-import imgPause from '../img/pause.png';
 import imgReset from '../img/reset.png';
 import img25min from '../img/25min.png';
 import img5min from '../img/5min.png';
@@ -116,30 +113,27 @@ function Timer(){
     return (
         <div id='timer-main'>
             <div id='timer-header'>
-                {/* aqui ficará o timer */}
+                {/* timer */}
                 <h1 id='timer-count'>{formatTime(count)}</h1>
-                {/* <h2 id='timer-workTime'>{isWorkTime}</h2> */}
+                <h2 id='timer-workTime'>work time{/* {isWorkTime} */}</h2>
+            </div>
+           
+            <div id='timer-btn-play'>
+                <Button icon={imgPlay} function={startTimer} name="start/pause" disabled={isActive}></Button>
+                <Button icon={imgReset} function={resetTimer} name="reset"></Button>
+                {/* <Button icon={imgPause} function={pauseTimer} name="pause" disabled={!isActive}></Button> */}
             </div>
 
-            <div>
-                <div id='timer-btn-play'>
-                    <Button icon={imgReset} function={resetTimer} name="reset"></Button>
-                    <Button icon={imgPlay} function={startTimer} name="start" disabled={isActive}></Button>
-                    <Button icon={imgPause} function={pauseTimer} name="pause" disabled={!isActive}></Button>
-                </div>
+            <div id='timer-btn-set'>
+                <Button icon={img25min} function={setTo25min} name="pomodoro"></Button>
+                <Button icon={img5min} function={setTo5min} name="short break"></Button>
+                <Button icon={img5min} function={setTo5min} /* set to 10 min */ name="long break"></Button>
 
-                <div id='timer-btn-set'>
-                    <Button icon={img25min} function={setTo25min} name="25 min"></Button>
-                    <Button icon={img5min} function={setTo5min} name="5 min"></Button>
-
-                    {/* personalizar timer */}
-                    <Modal content={
-                        <CustomDuration onSetDurations={setDurations} />
-                    } />
-                </div>
+                {/* personalizar timer */}
+                {/* <Modal content={
+                    <CustomDuration onSetDurations={setDurations} />
+                } /> */}
             </div>
-
-            
         </div>
     )
 }

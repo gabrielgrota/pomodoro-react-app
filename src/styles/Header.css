@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     padding: 8px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #header-icon{

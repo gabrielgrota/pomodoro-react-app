@@ -1,0 +1,10 @@
+#sidebar-main{
+    position: fixed;
+    right: 0;
+    top: 50%; /* centralizando */
+    transform: translateY(-50%);
+    width: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

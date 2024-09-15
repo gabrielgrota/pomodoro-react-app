@@ -5,11 +5,12 @@ import '../styles/ButtonIcon.css'
 
 function ButtonIcon(props){
     return (
-        <button className={props.className} id="button-icon-main" onClick={props.function} disabled={props.disabled}>
-            <img id="button-icon-icon" src={props.icon} alt="icon" />
-        </button>
+        <a href={props.href} target="_blank">
+            <button className={props.className} id="button-icon-main" onClick={props.function} disabled={props.disabled}>
+                <img id="button-icon-icon" src={props.icon} alt="icon" />
+            </button>
+        </a>
     )
-    
 }
 
 export default ButtonIcon;
