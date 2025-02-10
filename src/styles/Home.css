@@ -1,0 +1,14 @@
+#header-main{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  align-items: center;
+}
+
+#header-buttons{
+  display: flex;
+}
+
+#header-theme{
+  display: flex;
+}

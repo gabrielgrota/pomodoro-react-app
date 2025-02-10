@@ -29,7 +29,7 @@ export default function Modal(props){
                     <div onClick={toggleModal} id="modal-overlay"></div>
                     <div id="modal-content">
                         <div>{props.content}</div>
-                        <ButtonIcon icon={imgClose} className="modal-close" function={toggleModal} />
+                        <ButtonIcon icon={imgClose} className="modal-close" onClickFunction={toggleModal} />
                     </div>
                 </div>
             )}

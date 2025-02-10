@@ -1,0 +1,9 @@
+#user-main {
+    display: flex;
+    align-items: center;
+}
+
+#user-name {
+    font-weight: 700;
+    padding: 0 4px;
+}

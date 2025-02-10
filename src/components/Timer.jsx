@@ -8,6 +8,8 @@ import img25min from '../img/25min.png';
 import img5min from '../img/5min.png';
 import { collection, addDoc, Timestamp } from 'firebase/firestore'; // Importa as funções do Firebase
 import { db } from '../config/firebase';
+import CustomTimer from "./CustomTimer";
+import Modal from './Modal';
 
 function Timer(){
     
@@ -21,7 +23,9 @@ function Timer(){
     const [isActive, setIsActive] = useState(false);
 
     // para alterar o estado enquanto for workTime e breakTime
-    let [isWorkTime, setIsWorkTime] = useState(true);
+    let [isWorkTime, setIsWorkTime] = useState("work");
+
+    const [showCustomTimer, setShowCustomTimer] = useState(false);
 
     /* function */
     useEffect(() => {
@@ -45,27 +49,24 @@ function Timer(){
     }, [isActive, count, isWorkTime, breakDuration, workDuration]);
 
     // inicia ao timer
-    const startTimer = () => {
-        setIsActive(true);
-        saveTimestamp();
+    const toggleTimer = () => {
+        setIsActive(!isActive);
+        if (!isActive) saveTimestamp();
     }
-
-    // pausa ao timer
-    const pauseTimer = () => {setIsActive(false);}
 
     // reseta o timer para 25
     const resetTimer = () => {
         setIsActive(false);
         setCount(workDuration);
-        setIsWorkTime(true);
+        setIsWorkTime("work");
     }
 
     // atualiza as durações de tempo
-    const setDurations = (newWorkDuration, newBreakDuration) => {
+    /* const setDurations = (newWorkDuration, newBreakDuration) => {
         setWorkDuration(newWorkDuration * 60);
         setBreakDuration(newBreakDuration * 60);
         setCount(newWorkDuration * 60);
-    }
+    } */
 
     // formata o timer em minutos e segundos
     const formatTime = (count) => {
@@ -90,6 +91,13 @@ function Timer(){
         setIsWorkTime(isWorkTime = 'break');
     }
 
+    const setTo10min = () => {
+        setIsActive(false);
+        setBreakDuration(10*60);
+        setCount(10*60);
+        setIsWorkTime(isWorkTime = 'break');
+    }
+
     // som que toca quando acaba o timer
     const playSound = () => {
         const audio = new Audio('/crystalEcho.mp3');
@@ -110,16 +118,27 @@ function Timer(){
         }
     };
 
+    const applyCustomTimer = (totalSeconds) => {
+        setIsActive(false);
+        setCount(totalSeconds);
+        setIsWorkTime(true);
+        setShowCustomTimer(false);
+    }
+
     return (
         <div id='timer-main'>
             <div id='timer-header'>
                 {/* timer */}
                 <h1 id='timer-count'>{formatTime(count)}</h1>
-                <h2 id='timer-workTime'>work time{/* {isWorkTime} */}</h2>
+                <h2 id='timer-workTime'>{isWorkTime}</h2>
             </div>
            
             <div id='timer-btn-play'>
-                <Button icon={imgPlay} function={startTimer} name="start/pause" disabled={isActive}></Button>
+                <Button 
+                    icon={imgPlay} 
+                    function={toggleTimer} 
+                    name={isActive ? 'pause' : 'start'}>
+                </Button>
                 <Button icon={imgReset} function={resetTimer} name="reset"></Button>
                 {/* <Button icon={imgPause} function={pauseTimer} name="pause" disabled={!isActive}></Button> */}
             </div>
@@ -127,13 +146,25 @@ function Timer(){
             <div id='timer-btn-set'>
                 <Button icon={img25min} function={setTo25min} name="pomodoro"></Button>
                 <Button icon={img5min} function={setTo5min} name="short break"></Button>
-                <Button icon={img5min} function={setTo5min} /* set to 10 min */ name="long break"></Button>
-
-                {/* personalizar timer */}
-                {/* <Modal content={
-                    <CustomDuration onSetDurations={setDurations} />
-                } /> */}
+                <Button icon={img5min} function={setTo10min} /* set to 10 min */ name="long break"></Button>
             </div>
+
+            {/* <div id='custom-timer'>
+                <button onClick={() => setShowCustomTimer(!showCustomTimer)}>
+                    {showCustomTimer ? 'Close' : 'Custom'}
+                </button>
+                {showCustomTimer && <CustomTimer onApply={applyCustomTimer} />}
+            </div> */}
+            
+            {/* <Modal content={
+            <div id='custom-timer'>
+                <Button
+                    function={() => setShowCustomTimer(!showCustomTimer)}
+                    name={showCustomTimer ? 'close' : 'custom'}
+                />
+                {showCustomTimer && <CustomTimer onApply={applyCustomTimer} />}
+            </div>}
+            /> */}
         </div>
     )
 }

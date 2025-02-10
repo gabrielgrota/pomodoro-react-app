@@ -294,5 +294,89 @@ worktime no meio da tela, fazer função quando mudar para work short break e lo
 body.light e body.dark muda todo o tema da página. prestar atenção nisso.
 
 alterar funções dos botoes:
-botao long break precisa colocar 10 min na tela.
-start precisa mudar dependendo se está ativo = pause, se está desativado = start
+ok - botao long break precisa colocar 10 min na tela.
+ok - start precisa mudar dependendo se está ativo = pause, se está desativado = start
+
+fazer modal para botões laterais:
+
+  custom timer
+  mostrar e nao mostrar lista de to-do
+  mostrar e nao mostrar log de horario e dia feito o pomo
+
+---
+Desenvolver nas férias
+21012025
+22012025
+
+- ~~conta do usuario para login (ver firebase auth) [link](https://www.youtube.com/watch?v=9bXhf_TELP4)~~
+  - ~~logar com e-mail e senha criados~~
+  - ~~ver sobre ReactRouter antes do usuário entrar na tela inicial deve fazer login para salvar o log no firestore. fazer telas separadas de registro e login. após isso entrar na tela inicial.~~
+
+  - ~~fazer home da página no Home.jsx~~
+  - ~~fazer App.js com react-router~~
+
+  - quando passar o mouse sobre o icone de user mostrar o usuário logado
+  -  ~~ver como pegar o email do usuário loago e motsrar na tela.~~
+
+- adaptar ao mobile
+
+- trocar língua do site, portugues ou inglês ou swedish
+- ~~trocar link de jazz lofi para: https://www.youtube.com/watch?v=HuFYqnbVbzY~~
+
+- ~~custom timer (desenvolver componente)~~
+- mostrar e nao mostrar lista de to-do (desenvolver componente)
+- tentar salvar quantidade de vezes feitas, ver como fazer isso com usuário específico.
+- mostrar e nao mostrar log de horario e dia feito o pomo (desenvolver componente)
+- mostrar e nao mostrar o lofi na tela (hidden css)
+
+
+- desenvolver modal: list to-do, log do usuário, login
+  https://legacy.reactjs.org/docs/handling-events.html
+  gravei vídeos pelo OBS fazendo a lógica desse Show and Hide
+
+
+- desenvolver show div (hidden): lofi, custom
+botao x clicado uma vez, aparece o elemento clicado novamente desaparece
+(!buttonClicked)
+
+---
+temos o componente ToDoList que deve ser mostrado ou escondido na tela.
+
+temos um buttonShowHide que deve ser um botão e deve conter a função quando é clicado para esconder e mostrar outro componente.
+useState
+update status: true or false (!buttonHide) - só pra lembrar
+
+- ver CSS
+---
+
+- hospedar app no firebase, para isso terminar botoes ao lado antes. link: https://chatgpt.com/c/678bc244-9424-800f-a239-14e5cfd7a1cb
+---
+
+**arquivo env não funcionando. 21012025
+
+personalizar com css:
+tela de login/registro
+tela de custom timer
+tela inicial
+
+
+integrações para att do app:
+login do usuário com react router
+custom timer
+
+
+- organizar botoes no header (por enquanto)
+- fazer header dentro de home devido ao botão de logout
+- ~~botao de light e dark parou de funcionar - corrigido~~
+- apagar arquivo Header.jsx
+- Footer.jsx: remover lofi pois irá para header.
+
+24012025 fazendo testes com o modal
+
+04022025 organizar a tela inicial e fazer com que seja útil. -> hospedar.
+
+10022025
+esconder algumas funções para conseguir hospedar:
+- ~~esconder custom, to-do, log~~
+- ~~mostrar lofi e github (buttonIcon) no footer~~
+- ~~login do usuário no header junto com o title e darkmode, ver se consegue extrair apenas o nome do usuário antes do @ do e-mail.~~

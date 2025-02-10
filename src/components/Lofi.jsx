@@ -17,8 +17,8 @@ function Lofi(){
             </div>
             <div id="lofi-buttons">
                 <ButtonLofi function={() => handleClick('https://www.youtube.com/embed/jfKfPfyJRdk?si=66pfIH1r0gzTQkBt')} name="lofi" />
+                <ButtonLofi function={() => handleClick('https://www.youtube.com/embed/HuFYqnbVbzY?si=rzIYVq6GxYRzv-YW&amp')} name="jazz" />
                 <ButtonLofi function={() => handleClick('https://www.youtube.com/embed/MadEqVeRFuM?si=8aYTWIXIfj2V14Fd')} name="bossa" />
-                <ButtonLofi function={() => handleClick('https://www.youtube.com/embed/MYPVQccHhAQ?si=yIMoRMEHPZjBWxX_')} name="jazz" />
             </div>
         </div>
     )

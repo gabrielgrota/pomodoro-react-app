@@ -1,8 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: "AIzaSyCM5G9tBOQ_WeIuZehPg3f4NnQA_Djd9RQ",
   authDomain: "pomodoro-react-208.firebaseapp.com",
   projectId: "pomodoro-react-208",
   storageBucket: "pomodoro-react-208.appspot.com",
@@ -13,3 +14,4 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+export const auth = getAuth(app);

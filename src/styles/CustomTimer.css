@@ -1,0 +1,28 @@
+#custom-main {
+    background-color: #ccc;
+    padding: 12px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#custom-label {
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#custom-input {
+    height: 38px;
+    width: 50px;
+    border-radius: 30px;
+    border: none;
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+#custom-input input:hover {
+    background-color: #ddd;
+}

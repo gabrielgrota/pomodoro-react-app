@@ -1,6 +1,9 @@
 import React from "react";
 import '../styles/Header.css'
 import imgLogo from '../img/logo.png'
+import ButtonHideShow from "./ButtonHideShow";
+import Lofi from "./Lofi";
+import iconLofi from "../img/lofi.png"
 
 function Header(props){
     return (
@@ -12,6 +15,9 @@ function Header(props){
             {/* <div id="header-theme">
                 {props.buttonThemeContent}
             </div> */}
+            <div id="header-buttons">
+                <ButtonHideShow name="Lofi" icon={iconLofi} component={ <Lofi /> } />
+            </div>
         </div>
     )
 }

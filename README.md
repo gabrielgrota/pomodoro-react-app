@@ -9,8 +9,4 @@ tech used:
 
 ### to study and development.
 
-notes.md = onde está as notas sobre os estudos e pesquisas que tive que fazer durante o desenvolvimento.
-
-pomodoro-react : local
-
-pomodoro-react-app : git
+notes.md = todas as notas sobre os estudos, pesquisas e tarefas realizadas durante o desenvolvimento.
