@@ -34,3 +34,9 @@
 #timer-btn-set Button{
     margin: 8px 12px;
 }
+
+@media (max-width: 768px) {
+    #timer-btn-play, #timer-btn-set {
+        flex-direction: column;
+    }
+}

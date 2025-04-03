@@ -8,6 +8,7 @@ import IconRegister from '../img/register.png'
 
 import ButtonHideShow from './ButtonHideShow'
 import Title from './Title'
+import Button from './Button';
 
 export default function Login() {
 
@@ -62,6 +63,7 @@ export default function Login() {
 
             <Title />
             
+            <div id='login-div'>
             <div id='login-container'>
                 <h2>login</h2>
                 <input 
@@ -78,16 +80,36 @@ export default function Login() {
                         setLoginPassword(event.target.value);
                     }}
                 />
-                <button onClick={login}>login</button>
+                {/* <button onClick={login}>login</button> */}
+                <Button function={login} name="login" />
             </div>
             
             <div id='register-container'>
-            <p>don't have an account?</p>
-            <ButtonHideShow 
-                icon={IconRegister}
-                component={
-                    <div id='register-form'>
-                        <h2>register User</h2>
+                {/* <p>don't have an account?</p> */}
+                {/* <ButtonHideShow 
+                    icon={IconRegister}
+                    component={
+                        <div id='register-form'>
+                            <h2>register User</h2>
+                            <input
+                                type='email' 
+                                placeholder='email'
+                                onChange={(event) => {
+                                    setRegisterEmail(event.target.value);
+                                }}
+                            />
+                            <input 
+                                type='password'
+                                placeholder='password'
+                                onChange={(event) => {
+                                    setRegisterPassword(event.target.value);
+                                }}
+                            />
+                            <button onClick={register}>create user</button>
+                        </div>
+                    } /> */}
+                
+                        <h2>register</h2>
                         <input
                             type='email' 
                             placeholder='email'
@@ -102,9 +124,10 @@ export default function Login() {
                                 setRegisterPassword(event.target.value);
                             }}
                         />
-                        <button onClick={register}>create user</button>
-                    </div>
-                } />
+                        {/* <button onClick={register}>create user</button> */}
+                        <Button function={register} name="register" />
+                
+                </div>
             </div>
         </div>
     )

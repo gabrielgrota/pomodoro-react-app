@@ -1,23 +1,47 @@
 #login-main {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#login-div {
+    display: flex;
     align-items: center;
 }
 
-#login-container {
-    margin-top: 50px;
+/*  {
     display: flex;
     flex-direction: column;
-    width: 250px;
-}
-
-#register-container {
-    display: flex;
     align-items: center;
+} */
+
+#login-container, #register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
 }
 
-#register-form {
+#login-container input, #register-container input {
+    height: 32px;
+    border-radius: 30px;
+    padding: 0 8px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
 
+#login-container h2, #register-container h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #login-div {
+        flex-direction: column;
+    }
+
+    #login-container, #register-container {
+        margin: 50px 0px;
+    }
 }

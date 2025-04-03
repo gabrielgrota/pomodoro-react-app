@@ -380,3 +380,20 @@ esconder algumas funções para conseguir hospedar:
 - ~~esconder custom, to-do, log~~
 - ~~mostrar lofi e github (buttonIcon) no footer~~
 - ~~login do usuário no header junto com o title e darkmode, ver se consegue extrair apenas o nome do usuário antes do @ do e-mail.~~
+
+ver versão mobile: login ok, home
+~~arrumar login desktop~~
+
+---
+### como salvar dados no banco de dados firebase para um usuário em específico:
+
+Para salvar dados no Firebase para um usuário específico, utilize o ID do usuário (obtido através da autenticação) como chave para organizar os dados no Firestore ou Realtime Database, garantindo que cada usuário tenha seus dados separados. 
+
+arrumar logo do git que nao troca no modo dark
+
+
+npm run build: importante para deploy do projeto pois otimiza o codigo. bem daora.
+
+- [] remover notes.md e .bat da pasta do github, manter separado.
+
+depois pesquisar sobre vercel

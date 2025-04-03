@@ -40,7 +40,6 @@ export default function Home(props) {
       }, []);
 
     return (
-        <>
         <div id="container">
             <div id="header-main">
 
@@ -75,6 +74,5 @@ export default function Home(props) {
             <Timer />
             <Footer />
         </div>
-        </>
     )
 }
