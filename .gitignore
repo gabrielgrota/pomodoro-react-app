@@ -1,5 +1,6 @@
 node_modules
 .env
 
-notes.md
 pomodoro-react-start.bat
+
+notes-app.md
